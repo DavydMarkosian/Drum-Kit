@@ -60,43 +60,51 @@
 let btns = document.getElementsByTagName("button");
 
 for (const btn of btns) {
-  btn.addEventListener("click", function () {
-    switch (this.innerHTML) {
-      case "w":
-        let sDo = new Audio("assets/sounds/do.mp3");
-        sDo.currentTime = 0;
-        sDo.play();
-        break;
-      case "a":
-        let sRe = new Audio("assets/sounds/re.mp3");
-        sRe.currentTime = 0;
-        sRe.play();
-        break;
-      case "s":
-        let sMi = new Audio("assets/sounds/mi.mp3");
-        sMi.currentTime = 0;
-        sMi.play();
-        break;
-      case "d":
-        let sFa = new Audio("assets/sounds/fa.mp3");
-        sFa.currentTime = 0;
-        sFa.play();
-        break;
-      case "j":
-        let sSol = new Audio("assets/sounds/sol.mp3");
-        sSol.currentTime = 0;
-        sSol.play();
-        break;
-      case "k":
-        let sLa = new Audio("assets/sounds/lja.mp3");
-        sLa.currentTime = 0;
-        sLa.play();
-        break;
-      case "l":
-        let sSi = new Audio("assets/sounds/si.mp3");
-        sSi.currentTime = 0;
-        sSi.play();
-        break;
-    }
+  document.addEventListener("keydown", function (e) {
+    switchCase(e.key);
   });
+
+  btn.addEventListener("click", function () {
+    switchCase(this.innerHTML);
+  });
+}
+
+function switchCase(condition) {
+  switch (condition) {
+    case "w":
+      let sDo = new Audio("assets/sounds/do.mp3");
+      sDo.currentTime = 0;
+      sDo.play();
+      break;
+    case "a":
+      let sRe = new Audio("assets/sounds/re.mp3");
+      sRe.currentTime = 0;
+      sRe.play();
+      break;
+    case "s":
+      let sMi = new Audio("assets/sounds/mi.mp3");
+      sMi.currentTime = 0;
+      sMi.play();
+      break;
+    case "d":
+      let sFa = new Audio("assets/sounds/fa.mp3");
+      sFa.currentTime = 0;
+      sFa.play();
+      break;
+    case "j":
+      let sSol = new Audio("assets/sounds/sol.mp3");
+      sSol.currentTime = 0;
+      sSol.play();
+      break;
+    case "k":
+      let sLa = new Audio("assets/sounds/lja.mp3");
+      sLa.currentTime = 0;
+      sLa.play();
+      break;
+    case "l":
+      let sSi = new Audio("assets/sounds/si.mp3");
+      sSi.currentTime = 0;
+      sSi.play();
+      break;
+  }
 }
