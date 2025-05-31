@@ -62,10 +62,12 @@ let btns = document.getElementsByTagName("button");
 for (const btn of btns) {
   document.addEventListener("keydown", function (e) {
     switchCase(e.key);
+    btnAnimation(e.key);
   });
 
   btn.addEventListener("click", function () {
     switchCase(this.innerHTML);
+    btnAnimation(this.innerHTML);
   });
 }
 
@@ -108,3 +110,19 @@ function switchCase(condition) {
       break;
   }
 }
+
+function btnAnimation(currentKey) {
+  let activeBtn = document.querySelector("." + currentKey);
+  activeBtn.classList.toggle("pressed");
+  setTimeout(function () {
+    activeBtn.classList.toggle("pressed");
+  }, 100);
+}
+
+document.querySelector(".w");
+document.querySelector(".a");
+document.querySelector(".s");
+document.querySelector(".d");
+document.querySelector(".j");
+document.querySelector(".k");
+document.querySelector(".l");

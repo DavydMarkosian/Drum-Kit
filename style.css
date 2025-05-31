@@ -55,3 +55,24 @@ h1 {
 button:hover {
   cursor: pointer;
 }
+.w {
+}
+.a {
+}
+.s {
+}
+.d {
+}
+.j {
+}
+.k {
+}
+.l {
+}
+.drum {
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 aliceblue;
+  opacity: 0.5;
+}
